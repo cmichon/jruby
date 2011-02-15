@@ -1,0 +1,6 @@
+bin
+cache
+doc
+gems
+specifications
+*.jar

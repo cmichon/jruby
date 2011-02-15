@@ -1,0 +1,61 @@
+= Simple JRuby setup for Windows
+
+This is a small experiment, allowing you to have a portable JRuby environment with only 5 files.
+
+== Requirements
+
+  1/ JRE >= 1.6
+  2/ The bin subdirectory must be in the PATH of the current user
+
+== Known limitations
+
+  1/ Only 3 commands are provided: jruby, jirb, jgem.
+  2/ --1.9 ruby mode is turned on by default.
+  3/ Calling jruby from the root of a Windows filesystem will not work.
+  4/ 'jgem list' does not list the locally installed gems
+
+== Example output
+
+jruby -v
+
+  jruby 1.6.0.RC2 (ruby 1.9.2 patchlevel 136) (2011-02-09 5434c72) (Java HotSpot(TM) Client VM 1.6.0_23) [Windows Vista-x86-java]
+
+jirb -v
+
+  irb 0.9.6(09/06/30)
+
+gem env
+
+  RubyGems Environment:
+    - RUBYGEMS VERSION: 1.5.0
+    - RUBY VERSION: 1.9.2 (2011-02-09 patchlevel 136) [java]
+    - INSTALLATION DIRECTORY: file:/C:/jruby/lib/jruby-stdlib-1.6.0.RC2.jar!/META-INF/jruby.home/lib/ruby/gems/1.8
+    - RUBY EXECUTABLE: java -jar /C:/jruby/lib/jruby-stdlib-1.6.0.RC2.jar
+    - EXECUTABLE DIRECTORY: file:/C:/jruby/lib/jruby-stdlib-1.6.0.RC2.jar!/META-INF/jruby.home/bin
+    - RUBYGEMS PLATFORMS:
+      - ruby
+      - universal-java-1.6
+    - GEM PATHS:
+       - file:/C:/jruby/lib/jruby-stdlib-1.6.0.RC2.jar!/META-INF/jruby.home/lib/ruby/gems/1.8
+       - c:/jruby/bin//../gem
+    - GEM CONFIGURATION:
+       - :update_sources => true
+       - :verbose => true
+       - :benchmark => false
+       - :backtrace => false
+       - :bulk_threshold => 1000
+       - "install" => "--no-rdoc --no-ri --env-shebang"
+       - "update" => "--no-rdoc --no-ri --env-shebang"
+       - "gem" => "--no-ri --no-rdoc -i c:\\jruby\\gem"
+    - REMOTE SOURCES:
+       - http://rubygems.org/
+
+== Kudos
+
+Thanks to the JRuby development team and the mailing list for their precious time and advice.
+
+== LICENSE
+
+This is only a different packaging of JRuby, therefore the original license applies entirely. See LICENSE.RUBY for details.
+
+Copyright (c) 2011 Christian MICHON
