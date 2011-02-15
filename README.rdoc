@@ -12,7 +12,7 @@ This is a small experiment, allowing you to have a portable JRuby environment wi
   1/ Only 3 commands are provided: jruby, jirb, jgem.
   2/ --1.9 ruby mode is turned on by default.
   3/ Calling jruby from the root of a Windows filesystem will not work.
-  4/ 'jgem list' does not list the locally installed gems
+  4/ 'jgem list' may not work properly depending on your .gemrc
 
 == Example output
 
@@ -46,7 +46,6 @@ gem env
        - :bulk_threshold => 1000
        - "install" => "--no-rdoc --no-ri --env-shebang"
        - "update" => "--no-rdoc --no-ri --env-shebang"
-       - "gem" => "--no-ri --no-rdoc -i c:\\jruby\\gem"
     - REMOTE SOURCES:
        - http://rubygems.org/
 
